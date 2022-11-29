@@ -1,5 +1,5 @@
 plugins {
-    id 'java'
+    id 'application'
 }
 
 group 'org.example'
@@ -16,4 +16,13 @@ dependencies {
 
 test {
     useJUnitPlatform()
+}
+
+apply plugin : "java"
+ext {
+    javaMainClass = "prodcon.ProdConDriver"
+}
+
+application {
+    mainClassName = javaMainClass
 }
