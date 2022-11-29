@@ -48,7 +48,7 @@ public class Consumer extends Thread {
     public void run() {
         while (true) {
             try {
-                boolean allCreated = SaleRecord.getTotalNumberOfSales() >= 1000;
+                boolean allCreated = SaleRecord.getTotalNumberOfSales() >= SaleRecord.MAX_SALES;
                 boolean consumed = consumeNextItem();
                 if (allCreated && !consumed) break;
             } catch (InterruptedException e) {

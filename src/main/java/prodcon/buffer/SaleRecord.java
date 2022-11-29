@@ -1,8 +1,5 @@
 package prodcon.buffer;
 
-import java.util.Calendar;
-import java.util.Date;
-import java.util.GregorianCalendar;
 import java.util.Objects;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -13,6 +10,7 @@ public class SaleRecord {
     private int storeID;
     private int registerNumber;
     private float saleAmount;
+    public static final int MAX_SALES = 1_000;
 
     public static final int[] daysInMonth2016 = {31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 
@@ -39,7 +37,7 @@ public class SaleRecord {
     public static SaleRecord randomSaleRecord(int storeID) {
         int month = ThreadLocalRandom.current().nextInt(12) + 1;
         int day = ThreadLocalRandom.current().nextInt(daysInMonth2016[month - 1]) + 1;
-        int register = ThreadLocalRandom.current().nextInt(1, 6);
+        int register = ThreadLocalRandom.current().nextInt(6) + 1;
         float saleTotal = ThreadLocalRandom.current().nextFloat(0.50F, 999.99F);
 
         return new SaleRecord(month, day, storeID, register, saleTotal);

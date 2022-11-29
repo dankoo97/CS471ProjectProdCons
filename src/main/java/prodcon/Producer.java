@@ -9,6 +9,7 @@ import java.util.concurrent.ThreadLocalRandom;
 public class Producer extends Thread {
     private int storeID;
     private static final Semaphore createItem = new Semaphore(1);
+    private static final int[] sleepRange = {5, 40};
 
     public Producer() {
         storeID = 0;
@@ -21,7 +22,7 @@ public class Producer extends Thread {
     public void generateItems() throws InterruptedException {
         while (true) {
             createItem.acquire();
-            if (SaleRecord.getTotalNumberOfSales() < 1000) {
+            if (SaleRecord.getTotalNumberOfSales() < SaleRecord.MAX_SALES) {
                 SaleRecord saleRecord = SaleRecord.randomSaleRecord(this.storeID);
                 Buffer.addSaleRecord(saleRecord);
                 createItem.release();
@@ -30,7 +31,7 @@ public class Producer extends Thread {
                 break;
             }
 
-            Thread.sleep(ThreadLocalRandom.current().nextInt(5, 40));
+            Thread.sleep(ThreadLocalRandom.current().nextInt(sleepRange[0], sleepRange[1]));
         }
     }
 
