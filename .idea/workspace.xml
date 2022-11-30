@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="168010f3-d4b9-4310-9153-ff4db223b445" name="Changes" comment="Changed some hard coded things to variables">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="168010f3-d4b9-4310-9153-ff4db223b445" name="Changes" comment="Updated buffer to use bounded buffer method with semaphores">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/prodcon/Consumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/prodcon/Consumer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/prodcon/ProdConDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/prodcon/ProdConDriver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/prodcon/Producer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/prodcon/Producer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/prodcon/buffer/Buffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/prodcon/buffer/Buffer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/prodcon/buffer/SaleRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/prodcon/buffer/SaleRecord.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/prodcon/statistics/Statistics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/prodcon/statistics/Statistics.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -180,7 +180,7 @@
       <option name="presentableId" value="Default" />
       <updated>1669736160637</updated>
       <workItem from="1669736162517" duration="13692000" />
-      <workItem from="1669767510534" duration="2462000" />
+      <workItem from="1669767510534" duration="3154000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1669736235440</created>
@@ -224,7 +224,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669749259693</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Updated buffer to use bounded buffer method with semaphores">
+      <created>1669770005609</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1669770005609</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -247,6 +254,7 @@
     <MESSAGE value="Source Code" />
     <MESSAGE value="Changes by Josh" />
     <MESSAGE value="Changed some hard coded things to variables" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed some hard coded things to variables" />
+    <MESSAGE value="Updated buffer to use bounded buffer method with semaphores" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated buffer to use bounded buffer method with semaphores" />
   </component>
 </project>
