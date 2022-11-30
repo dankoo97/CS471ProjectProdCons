@@ -6,12 +6,14 @@ import prodcon.statistics.Statistics;
 
 import java.util.ArrayList;
 import java.util.concurrent.Semaphore;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class Consumer extends Thread {
     private static int nextConsumerID;
     private final int consumerID;
     private final ArrayList<SaleRecord> saleRecords;
     private final static Semaphore consumeItem = new Semaphore(1);
+    private final static int[] sleepRange = {5, 20};
 
     public Consumer() {
         consumerID = nextConsumerID;
@@ -34,6 +36,7 @@ public class Consumer extends Thread {
             SaleRecord sale = Buffer.pop();
             saleRecords.add(sale);
             consumeItem.release();
+            Thread.sleep(ThreadLocalRandom.current().nextInt(sleepRange[0], sleepRange[1]));
             return true;
         }
         consumeItem.release();
