@@ -9,7 +9,7 @@ public class ProdConDriver {
     public static void main(String[] args) throws InterruptedException {
         int p = Integer.parseInt(args[0]);
         int c = Integer.parseInt(args[1]);
-        Buffer.setB(Integer.parseInt(args[2]));
+        Buffer.setMaxBuffer(Integer.parseInt(args[2]));
 
         ArrayList<Producer> producers = new ArrayList<>(p);
         ArrayList<Consumer> consumers = new ArrayList<>(c);
@@ -31,7 +31,7 @@ public class ProdConDriver {
         int sum = 0;
         for (Consumer consumer : consumers) {
             consumer.join();
-            sum += consumer.getSaleRecordHashSet().size();
+            sum += consumer.getSaleRecords().size();
             System.out.println(consumer.getStatistics());
         }
 
