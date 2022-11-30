@@ -13,7 +13,6 @@ public class Buffer {
         empty.acquire();
         mutex.acquire();
         saleRecordList.add(saleRecord);
-//        System.out.println("Added: " + saleRecordList.size());
         mutex.release();
         full.release();
     }
@@ -23,7 +22,6 @@ public class Buffer {
         mutex.acquire();
         SaleRecord first = saleRecordList.get(0);
         saleRecordList.remove(0);
-//        System.out.println("Removed: " + saleRecordList.size());
         mutex.release();
         empty.release();
         return first;

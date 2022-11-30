@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="168010f3-d4b9-4310-9153-ff4db223b445" name="Changes" comment="Labelled total time">
-      <change beforePath="$PROJECT_DIR$/src/main/java/prodcon/Consumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/prodcon/Consumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/prodcon/ProdConDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/prodcon/ProdConDriver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/prodcon/Producer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/prodcon/Producer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/prodcon/statistics/Statistics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/prodcon/statistics/Statistics.java" afterDir="false" />
+    <list default="true" id="168010f3-d4b9-4310-9153-ff4db223b445" name="Changes" comment="Added some documentation to Statistics">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/prodcon/buffer/Buffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/prodcon/buffer/Buffer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +57,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;
   }
 }</component>
-  <component name="RunManager" selected="Gradle.CS471ProjectProdCons [jar]">
+  <component name="RunManager" selected="Gradle.CS471ProjectProdCons [run --args &quot;9 5 5&quot;]">
     <configuration name="CS471ProjectProdCons [jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -71,6 +70,29 @@
         <option name="taskNames">
           <list>
             <option value="jar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="CS471ProjectProdCons [run --args &quot;9 5 5&quot;]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="run" />
+            <option value="--args" />
+            <option value="&quot;9 5 5&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -124,28 +146,6 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="CS471ProjectProdCons [run --args=&quot;5 2 10 &quot;]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="run" />
-            <option value="--args=&quot;5 2 10 &quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
     <configuration name="CS471ProjectProdCons [run --args=&quot;9 5 5 &quot;]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -170,11 +170,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.CS471ProjectProdCons [run --args &quot;9 5 5&quot;]" />
         <item itemvalue="Gradle.CS471ProjectProdCons [jar]" />
         <item itemvalue="Gradle.CS471ProjectProdCons [run --args=&quot;9 5 5 &quot;]" />
         <item itemvalue="Gradle.CS471ProjectProdCons [run --args=&quot;100 1 2 &quot;]" />
         <item itemvalue="Gradle.CS471ProjectProdCons [run --args=&quot;10 1 4 &quot;]" />
-        <item itemvalue="Gradle.CS471ProjectProdCons [run --args=&quot;5 2 10 &quot;]" />
       </list>
     </recent_temporary>
   </component>
@@ -188,7 +188,7 @@
       <updated>1669736160637</updated>
       <workItem from="1669736162517" duration="13692000" />
       <workItem from="1669767510534" duration="5234000" />
-      <workItem from="1669826665356" duration="2478000" />
+      <workItem from="1669826665356" duration="3515000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1669736235440</created>
@@ -309,7 +309,21 @@
       <option name="project" value="LOCAL" />
       <updated>1669828592747</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Added some documentation to consumer and producer">
+      <created>1669829164972</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1669829164972</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Added some documentation to Statistics">
+      <created>1669829253690</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1669829253690</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -344,6 +358,8 @@
     <MESSAGE value="Added global stats and prettied up Statistics print" />
     <MESSAGE value="Added time delta" />
     <MESSAGE value="Labelled total time" />
-    <option name="LAST_COMMIT_MESSAGE" value="Labelled total time" />
+    <MESSAGE value="Added some documentation to consumer and producer" />
+    <MESSAGE value="Added some documentation to Statistics" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added some documentation to Statistics" />
   </component>
 </project>
