@@ -47,7 +47,7 @@ public class ProdConDriver {
 
         System.out.println("All Producers: ");
         System.out.println(globalStats.toPrettyString());
-        System.out.println(Duration.between(start, Instant.now()).toMillis() + " Milliseconds");
+        System.out.println("Total time: " + Duration.between(start, Instant.now()).toMillis() + " Milliseconds");
         System.out.println();
     }
 }
