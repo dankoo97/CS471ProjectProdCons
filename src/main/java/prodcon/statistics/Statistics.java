@@ -38,7 +38,7 @@ public class Statistics {
 
     /**
      * Appends more sales to the statistics
-     * @param sales The sales to
+     * @param sales The sales to add
      */
     @SafeVarargs
     public final void appendStatistics(ArrayList<SaleRecord>... sales) {
@@ -60,6 +60,10 @@ public class Statistics {
         }
     }
 
+    /**
+     * Appends the statistics from other statistics to this
+     * @param other An iterable of other statistics objects
+     */
     public final void appendStatistics(Statistics... other) {
         for (Statistics stats : other) {
             for (Integer monthly : stats.getMonthlySales().keySet()) {
@@ -95,6 +99,10 @@ public class Statistics {
                 '}';
     }
 
+    /**
+     * Slightly more readable stats
+     * @return A string
+     */
     public String toPrettyString() {
         return "Monthly Sales: " + monthlySales +
                 "\nStore-wide Sales: " + storeWideSales +
