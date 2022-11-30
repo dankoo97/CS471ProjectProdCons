@@ -15,10 +15,11 @@ public class ProdConDriver {
 
         int p = Integer.parseInt(args[0]);
         int c = Integer.parseInt(args[1]);
-        Buffer.setMaxBuffer(Integer.parseInt(args[2]));
+        int b = Integer.parseInt(args[2]);
 
         ArrayList<Producer> producers = new ArrayList<>(p);
         ArrayList<Consumer> consumers = new ArrayList<>(c);
+        Buffer.setMaxBuffer(b);
 
         for (int i = 0; i < p; i++) {
             producers.add(new Producer(i+1));
