@@ -30,6 +30,12 @@ public class SaleRecord {
         this.saleAmount = saleAmount;
     }
 
+    /**
+     * Generates a sale record with random numbers for date,
+     * register, and sale total.
+     * @param storeID - receives storeID as input from the producer
+     * @return returns the random saleRecord to the producer
+     */
     public static SaleRecord randomSaleRecord(int storeID) {
         int month = ThreadLocalRandom.current().nextInt(12) + 1;
         int day = ThreadLocalRandom.current().nextInt(daysInMonth2016[month - 1]) + 1;
@@ -86,6 +92,7 @@ public class SaleRecord {
     public static void incrementTotalNumberOfSales() {
         totalNumberOfSales++;
     }
+
 
     @Override
     public String toString() {

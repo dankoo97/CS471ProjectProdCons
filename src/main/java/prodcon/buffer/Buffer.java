@@ -9,6 +9,11 @@ public class Buffer {
     private static final Semaphore full = new Semaphore(0);
     private static final Semaphore mutex = new Semaphore(1);
 
+    /**
+     * Adds sale record to the shared buffer
+     * @param saleRecord - takes saleRecord as input from producer
+     * @throws InterruptedException - required for use of Semaphore
+     */
     public static void addSaleRecord(SaleRecord saleRecord) throws InterruptedException {
         empty.acquire();
         mutex.acquire();
@@ -18,6 +23,11 @@ public class Buffer {
         full.release();
     }
 
+    /**
+     * Pops and returns first sale record from the shared buffer
+     * @return - SaleRecord being consumed by consumer
+     * @throws InterruptedException - required for use of Semaphore
+     */
     public static SaleRecord pop() throws InterruptedException {
         full.acquire();
         mutex.acquire();
