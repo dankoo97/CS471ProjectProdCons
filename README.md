@@ -24,5 +24,6 @@ of consumers, and b represents the buffer size
 `java -jar CS471ProjectProdCons-1.0-SNAPSHOT.jar 2 10 5` 2 producers, 10 consumers, and buffer of size 5
   
 <html>&#8942</html>  
-  
+<br />  
+
 `java -jar CS471ProjectProdCons-1.0-SNAPSHOT.jar 10 10 100` 10 producers, 10 consumers, and buffer of size 100  
