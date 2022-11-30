@@ -43,6 +43,10 @@ public class Consumer extends Thread {
         return false;
     }
 
+    public int getConsumerID() {
+        return consumerID;
+    }
+
     @Override
     public void run() {
         while (true) {

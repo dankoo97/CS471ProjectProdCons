@@ -1,7 +1,7 @@
 package prodcon;
 
 import prodcon.buffer.Buffer;
-import prodcon.buffer.SaleRecord;
+import prodcon.statistics.Statistics;
 
 import java.util.ArrayList;
 
@@ -28,15 +28,19 @@ public class ProdConDriver {
             producer.join();
         }
 
-        int sum = 0;
+        Statistics globalStats = new Statistics();
+
         for (Consumer consumer : consumers) {
             consumer.join();
-            sum += consumer.getSaleRecords().size();
-            System.out.println(consumer.getStatistics());
+            Statistics consumerStats = consumer.getStatistics();
+            globalStats.appendStatistics(consumerStats);
+            System.out.println("Consumer ID: " + consumer.getConsumerID());
+            System.out.println(consumerStats.toPrettyString());
+            System.out.println();
         }
 
-        System.out.println(sum);
-        System.out.println(SaleRecord.getTotalNumberOfSales());
-
+        System.out.println("All Producers: ");
+        System.out.println(globalStats.toPrettyString());
+        System.out.println();
     }
 }

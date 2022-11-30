@@ -40,7 +40,9 @@ public class Producer extends Thread {
         return storeID;
     }
 
-    public void setStoreID(int storeID){ this.storeID = storeID;}
+    public void setStoreID(int storeID){
+        this.storeID = storeID;
+    }
 
     @Override
     public void run() {
