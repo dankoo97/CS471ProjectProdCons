@@ -10,29 +10,29 @@ import java.util.concurrent.Semaphore;
 public class Consumer extends Thread {
     private static int nextConsumerID;
     private final int consumerID;
-    private final ArrayList<SaleRecord> saleRecordHashSet;
+    private final ArrayList<SaleRecord> saleRecords;
     private final static Semaphore consumeItem = new Semaphore(1);
 
     public Consumer() {
         consumerID = nextConsumerID;
         nextConsumerID++;
 
-        saleRecordHashSet = new ArrayList<>();
+        saleRecords = new ArrayList<>();
     }
 
     public Statistics getStatistics() {
-        return new Statistics(saleRecordHashSet);
+        return new Statistics(saleRecords);
     }
 
-    public ArrayList<SaleRecord> getSaleRecordHashSet() {
-        return saleRecordHashSet;
+    public ArrayList<SaleRecord> getSaleRecords() {
+        return saleRecords;
     }
 
     public boolean consumeNextItem() throws InterruptedException {
         consumeItem.acquire();
         if(!Buffer.getSaleRecordList().isEmpty()){
             SaleRecord sale = Buffer.pop();
-            saleRecordHashSet.add(sale);
+            saleRecords.add(sale);
             consumeItem.release();
             return true;
         }
