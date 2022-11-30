@@ -19,4 +19,10 @@ This project can be recompiled into a jar file via `./gradlew jar` or run via `.
 `java -jar CS471ProjectProdCons-1.0-SNAPSHOT.jar p c b` where p is the total number of producers, c is the total number 
 of consumers, and b represents the buffer size
 
-``
+`java -jar CS471ProjectProdCons-1.0-SNAPSHOT.jar 2 2 5` 2 producers, 2 consumers, and buffer of size 5<br>
+`java -jar CS471ProjectProdCons-1.0-SNAPSHOT.jar 2 5 5` 2 producers, 5 consumers, and buffer of size 5<br>
+`java -jar CS471ProjectProdCons-1.0-SNAPSHOT.jar 2 10 5` 2 producers, 10 consumers, and buffer of size 5<br>
+*
+*
+*
+`java -jar CS471ProjectProdCons-1.0-SNAPSHOT.jar 10 10 100` 10 producers, 10 consumers, and buffer of size 100<br>
