@@ -5,8 +5,9 @@ import java.util.concurrent.Semaphore;
 
 public class Buffer {
     private static final ArrayList<SaleRecord> saleRecordList = new ArrayList<>();
-    private static int b;
-    private static Semaphore empty, full, mutex;
+    private static Semaphore empty;
+    private static final Semaphore full = new Semaphore(0);
+    private static final Semaphore mutex = new Semaphore(1);
 
     public static void addSaleRecord(SaleRecord saleRecord) throws InterruptedException {
         empty.acquire();
@@ -30,10 +31,7 @@ public class Buffer {
         return saleRecordList;
     }
 
-    public static void setB(int maxBuffer){
-        b = maxBuffer;
-        empty = new Semaphore(b);
-        full = new Semaphore(0);
-        mutex = new Semaphore(b);
+    public static void setMaxBuffer(int maxBuffer){
+        empty = new Semaphore(maxBuffer);
     }
 }
