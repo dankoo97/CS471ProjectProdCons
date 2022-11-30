@@ -1,5 +1,6 @@
 package prodcon;
 
+import prodcon.buffer.Buffer;
 import prodcon.buffer.SaleRecord;
 
 import java.util.ArrayList;
@@ -8,7 +9,8 @@ public class ProdConDriver {
     public static void main(String[] args) throws InterruptedException {
         int p = Integer.parseInt(args[0]);
         int c = Integer.parseInt(args[1]);
-        int b = SaleRecord.MAX_SALES; // TODO: temp value, check what real value should be
+        //int b = SaleRecord.MAX_SALES; // TODO: temp value, check what real value should be
+        Buffer.setB(Integer.parseInt(args[2]));
 
         ArrayList<Producer> producers = new ArrayList<>(p);
         ArrayList<Consumer> consumers = new ArrayList<>(c);

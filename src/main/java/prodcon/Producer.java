@@ -23,6 +23,7 @@ public class Producer extends Thread {
         while (true) {
             createItem.acquire();
             if (SaleRecord.getTotalNumberOfSales() < SaleRecord.MAX_SALES) {
+                while(Buffer.isBufferFull());
                 SaleRecord saleRecord = SaleRecord.randomSaleRecord(this.storeID);
                 Buffer.addSaleRecord(saleRecord);
                 createItem.release();
