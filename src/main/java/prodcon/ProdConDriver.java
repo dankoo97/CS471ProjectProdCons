@@ -9,7 +9,6 @@ public class ProdConDriver {
     public static void main(String[] args) throws InterruptedException {
         int p = Integer.parseInt(args[0]);
         int c = Integer.parseInt(args[1]);
-        //int b = SaleRecord.MAX_SALES; // TODO: temp value, check what real value should be
         Buffer.setB(Integer.parseInt(args[2]));
 
         ArrayList<Producer> producers = new ArrayList<>(p);

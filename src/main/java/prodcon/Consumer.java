@@ -20,10 +20,6 @@ public class Consumer extends Thread {
         saleRecordHashSet = new ArrayList<>();
     }
 
-    public void addSalesRecord(SaleRecord sale) {
-        saleRecordHashSet.add(sale);
-    }
-
     public Statistics getStatistics() {
         return new Statistics(saleRecordHashSet);
     }
@@ -36,7 +32,7 @@ public class Consumer extends Thread {
         consumeItem.acquire();
         if(!Buffer.getSaleRecordList().isEmpty()){
             SaleRecord sale = Buffer.pop();
-            addSalesRecord(sale);
+            saleRecordHashSet.add(sale);
             consumeItem.release();
             return true;
         }
