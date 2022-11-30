@@ -26,3 +26,13 @@ ext {
 application {
     mainClassName = javaMainClass
 }
+
+jar {
+
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    manifest {
+        attributes 'Implementation-Title': 'ProdCon',
+                'Implementation-Version': '1.0',
+                'Main-Class': javaMainClass
+    }
+}

@@ -35,6 +35,7 @@ public class SaleRecord {
         int day = ThreadLocalRandom.current().nextInt(daysInMonth2016[month - 1]) + 1;
         int register = ThreadLocalRandom.current().nextInt(6) + 1;
         float saleTotal = ThreadLocalRandom.current().nextFloat(0.50F, 999.99F);
+        //float saleTotal = (float)ThreadLocalRandom.current().nextDouble(0.50D, 999.99D);
 
         return new SaleRecord(month, day, storeID, register, saleTotal);
     }
