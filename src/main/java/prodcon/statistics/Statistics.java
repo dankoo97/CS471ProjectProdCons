@@ -10,6 +10,10 @@ public class Statistics {
     private final HashMap<Integer, Float> storeWideSales;
     private float totalSales;
 
+    /**
+     * Creates a statistics object to keep track of statistics as outlined in project description
+     * @param sales a list of sales
+     */
     @SafeVarargs
     public Statistics(ArrayList<SaleRecord>... sales) {
         monthlySales = new HashMap<>(12);
@@ -32,6 +36,10 @@ public class Statistics {
         }
     }
 
+    /**
+     * Appends more sales to the statistics
+     * @param sales The sales to
+     */
     @SafeVarargs
     public final void appendStatistics(ArrayList<SaleRecord>... sales) {
         for (ArrayList<SaleRecord> sale: sales) {

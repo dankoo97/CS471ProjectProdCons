@@ -19,6 +19,10 @@ public class Producer extends Thread {
         this.storeID = storeID;
     }
 
+    /**
+     * Generates items from a producer if there are still items to produce. Sleeps after producing an item
+     * @throws InterruptedException - required for use of Semaphore
+     */
     public void generateItems() throws InterruptedException {
         while (true) {
             createItem.acquire();
@@ -44,6 +48,9 @@ public class Producer extends Thread {
         this.storeID = storeID;
     }
 
+    /**
+     * Thread runs generate items until all items are created
+     */
     @Override
     public void run() {
         try {

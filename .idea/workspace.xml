@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="168010f3-d4b9-4310-9153-ff4db223b445" name="Changes" comment="Added global stats and prettied up Statistics print">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="168010f3-d4b9-4310-9153-ff4db223b445" name="Changes" comment="Labelled total time">
+      <change beforePath="$PROJECT_DIR$/src/main/java/prodcon/Consumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/prodcon/Consumer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/prodcon/ProdConDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/prodcon/ProdConDriver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/prodcon/Producer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/prodcon/Producer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/prodcon/statistics/Statistics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/prodcon/statistics/Statistics.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,7 +188,7 @@
       <updated>1669736160637</updated>
       <workItem from="1669736162517" duration="13692000" />
       <workItem from="1669767510534" duration="5234000" />
-      <workItem from="1669826665356" duration="1720000" />
+      <workItem from="1669826665356" duration="2478000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1669736235440</created>
@@ -293,7 +295,21 @@
       <option name="project" value="LOCAL" />
       <updated>1669827631064</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Added time delta">
+      <created>1669828398814</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1669828398814</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Labelled total time">
+      <created>1669828592747</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1669828592747</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -326,6 +342,8 @@
     <MESSAGE value="workspace.xml" />
     <MESSAGE value="Added sleep to Consumer" />
     <MESSAGE value="Added global stats and prettied up Statistics print" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added global stats and prettied up Statistics print" />
+    <MESSAGE value="Added time delta" />
+    <MESSAGE value="Labelled total time" />
+    <option name="LAST_COMMIT_MESSAGE" value="Labelled total time" />
   </component>
 </project>

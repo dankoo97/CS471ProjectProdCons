@@ -15,6 +15,9 @@ public class Consumer extends Thread {
     private final static Semaphore consumeItem = new Semaphore(1);
     private final static int[] sleepRange = {5, 20};
 
+    /**
+     * Creates a new consumer and increments consumerID
+     */
     public Consumer() {
         consumerID = nextConsumerID;
         nextConsumerID++;
@@ -22,6 +25,9 @@ public class Consumer extends Thread {
         saleRecords = new ArrayList<>();
     }
 
+    /**
+     * @return Returns the statistics for the consumer
+     */
     public Statistics getStatistics() {
         return new Statistics(saleRecords);
     }
@@ -30,6 +36,11 @@ public class Consumer extends Thread {
         return saleRecords;
     }
 
+    /**
+     * Grabs an item from the buffer it one exists and consumes it. Sleeps after successfully consuming an item
+     * @return Boolean of whether the function could consume an item
+     * @throws InterruptedException Require for semaphore
+     */
     public boolean consumeNextItem() throws InterruptedException {
         consumeItem.acquire();
         if(!Buffer.getSaleRecordList().isEmpty()){
@@ -47,6 +58,9 @@ public class Consumer extends Thread {
         return consumerID;
     }
 
+    /**
+     * The thread run keeps trying to consume items until all have been created and there are no more to consume
+     */
     @Override
     public void run() {
         while (true) {

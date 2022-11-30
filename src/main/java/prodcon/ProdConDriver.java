@@ -15,10 +15,11 @@ public class ProdConDriver {
 
         int p = Integer.parseInt(args[0]);
         int c = Integer.parseInt(args[1]);
-        Buffer.setMaxBuffer(Integer.parseInt(args[2]));
+        int b = Integer.parseInt(args[2]);
 
         ArrayList<Producer> producers = new ArrayList<>(p);
         ArrayList<Consumer> consumers = new ArrayList<>(c);
+        Buffer.setMaxBuffer(b);
 
         /**
          * Loops p times, generating p producers
@@ -60,7 +61,7 @@ public class ProdConDriver {
 
         System.out.println("All Producers: ");
         System.out.println(globalStats.toPrettyString());
-        System.out.println(Duration.between(start, Instant.now()).toMillis() + " Milliseconds");
+        System.out.println("Total time: " + Duration.between(start, Instant.now()).toMillis() + " Milliseconds");
         System.out.println();
     }
 }
