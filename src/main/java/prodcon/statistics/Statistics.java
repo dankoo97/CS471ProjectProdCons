@@ -4,7 +4,6 @@ import prodcon.buffer.SaleRecord;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.HashSet;
 
 public class Statistics {
     private final HashMap<Integer, Float> monthlySales;
