@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="168010f3-d4b9-4310-9153-ff4db223b445" name="Changes" comment="Added sleep to Consumer">
+    <list default="true" id="168010f3-d4b9-4310-9153-ff4db223b445" name="Changes" comment="Added global stats and prettied up Statistics print">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/prodcon/Consumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/prodcon/Consumer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/prodcon/ProdConDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/prodcon/ProdConDriver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/prodcon/Producer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/prodcon/Producer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/prodcon/statistics/Statistics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/prodcon/statistics/Statistics.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +56,28 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;
   }
 }</component>
-  <component name="RunManager" selected="Gradle.CS471ProjectProdCons [run --args=&quot;9 5 5 &quot;]">
+  <component name="RunManager" selected="Gradle.CS471ProjectProdCons [jar]">
+    <configuration name="CS471ProjectProdCons [jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="jar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="CS471ProjectProdCons [run --args=&quot;10 1 4 &quot;]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -95,28 +113,6 @@
           <list>
             <option value="run" />
             <option value="--args=&quot;100 1 2 &quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="CS471ProjectProdCons [run --args=&quot;100 3 10 &quot;]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="run" />
-            <option value="--args=&quot;100 3 10 &quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -172,11 +168,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.CS471ProjectProdCons [jar]" />
         <item itemvalue="Gradle.CS471ProjectProdCons [run --args=&quot;9 5 5 &quot;]" />
         <item itemvalue="Gradle.CS471ProjectProdCons [run --args=&quot;100 1 2 &quot;]" />
         <item itemvalue="Gradle.CS471ProjectProdCons [run --args=&quot;10 1 4 &quot;]" />
         <item itemvalue="Gradle.CS471ProjectProdCons [run --args=&quot;5 2 10 &quot;]" />
-        <item itemvalue="Gradle.CS471ProjectProdCons [run --args=&quot;100 3 10 &quot;]" />
       </list>
     </recent_temporary>
   </component>
@@ -190,7 +186,7 @@
       <updated>1669736160637</updated>
       <workItem from="1669736162517" duration="13692000" />
       <workItem from="1669767510534" duration="5234000" />
-      <workItem from="1669826665356" duration="952000" />
+      <workItem from="1669826665356" duration="1720000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1669736235440</created>
@@ -290,7 +286,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669772061132</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Added global stats and prettied up Statistics print">
+      <created>1669827631064</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1669827631064</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -322,6 +325,7 @@
     <MESSAGE value="Removed unused import" />
     <MESSAGE value="workspace.xml" />
     <MESSAGE value="Added sleep to Consumer" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added sleep to Consumer" />
+    <MESSAGE value="Added global stats and prettied up Statistics print" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added global stats and prettied up Statistics print" />
   </component>
 </project>

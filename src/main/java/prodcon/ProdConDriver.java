@@ -3,10 +3,16 @@ package prodcon;
 import prodcon.buffer.Buffer;
 import prodcon.statistics.Statistics;
 
+import java.time.Duration;
+import java.time.Instant;
 import java.util.ArrayList;
+
+
 
 public class ProdConDriver {
     public static void main(String[] args) throws InterruptedException {
+        Instant start = Instant.now();
+
         int p = Integer.parseInt(args[0]);
         int c = Integer.parseInt(args[1]);
         Buffer.setMaxBuffer(Integer.parseInt(args[2]));
@@ -41,6 +47,7 @@ public class ProdConDriver {
 
         System.out.println("All Producers: ");
         System.out.println(globalStats.toPrettyString());
+        System.out.println(Duration.between(start, Instant.now()).toMillis() + " Milliseconds");
         System.out.println();
     }
 }
