@@ -20,8 +20,6 @@ public class SaleRecord {
         storeID = 0;
         registerNumber = 0;
         saleAmount = 0;
-
-        totalNumberOfSales++;
     }
 
     public SaleRecord(int month, int day, int storeID, int registerNumber, float saleAmount) {
@@ -30,8 +28,6 @@ public class SaleRecord {
         this.storeID = storeID;
         this.registerNumber = registerNumber;
         this.saleAmount = saleAmount;
-
-        totalNumberOfSales++;
     }
 
     public static SaleRecord randomSaleRecord(int storeID) {
@@ -85,6 +81,9 @@ public class SaleRecord {
 
     public static int getTotalNumberOfSales() {
         return totalNumberOfSales;
+    }
+    public static void incrementTotalNumberOfSales() {
+        totalNumberOfSales++;
     }
 
     @Override
